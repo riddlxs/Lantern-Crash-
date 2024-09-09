@@ -19,7 +19,7 @@ function love.errorhandler(msg)
 end
 
 -- Game variables
-local enemy_speed = 27
+local enemy_speed = 27 --not too slow, not too fast! nts = remember to find the middle ground to make it fun for players. 
 local rows = 7
 local columns = 6
 local enemy_spawn_interval = 7 --new waves spawn every 7 seconds
@@ -45,7 +45,7 @@ function love.load()
     soundEffects = SoundEffects.new()
     
     initializeGame()
-    love.window.setTitle("Lantern Crash 2024")
+    love.window.setTitle("Lantern Crash 2024 - Liana Hockin")
     loadHighScore()
 end
 
