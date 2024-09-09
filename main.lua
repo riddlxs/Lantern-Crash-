@@ -225,16 +225,11 @@ function saveHighScore() --highscore save
 end
 
 function loadHighScore()
-    if love.filesystem.getInfo("highscore.txt") then --load highscore also in txt in game files
+    if love.filesystem.getInfo("highscore.txt") then
         local file = love.filesystem.newFile("highscore.txt", "r")
         if file then
-            high_score = tonumber(file:read())
+            local content = file:read()
             file:close()
-            if not high_score then
-                high_score = 0
-            end
         end
-    else
-        high_score = 0
     end
 end
