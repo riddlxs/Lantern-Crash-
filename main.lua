@@ -19,7 +19,7 @@ function love.errorhandler(msg)
 end
 
 -- Game variables
-local enemy_speed = 27 --not too slow, not too fast! nts = remember to find the middle ground to make it fun for players. 
+local enemy_speed = 24 --not too slow, not too fast! nts = remember to find the middle ground to make it fun for players. 
 local rows = 7
 local columns = 6
 local enemy_spawn_interval = 7 --new waves spawn every 7 seconds
@@ -160,7 +160,7 @@ function initializeGame() --set up inital game and all the variables!
     }
 
     enemies = {}
-    enemy_speed = 27
+    enemy_speed = 24
     player_score = 0
     game_over = false
 
