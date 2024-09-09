@@ -226,7 +226,7 @@ end
 
 function loadHighScore()
     if love.filesystem.getInfo("highscore.txt") then
-        local file = love.filesystem.newFile("highscore.txt", "r") -- r = read file not write when it comes to loading the highscore! 
+        local file = love.filesystem.newFile("highscore.txt", "r") -- r = read file not write when it comes to loading the highscore! nts = if r is not included the highscore will stay for everyone. need highscore to reset per run of the game.
         if file then
             local content = file:read()
             file:close()
