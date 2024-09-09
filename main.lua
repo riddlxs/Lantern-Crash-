@@ -24,7 +24,7 @@ local rows = 7
 local columns = 6
 local enemy_spawn_interval = 7 --new waves spawn every 7 seconds
 local time_since_last_spawn = 0
-local player_score = 0 --player score
+local player_score = 0 -- player score
 local high_score = 0  --player high score
 local game_over = false --simple boolean for game over
 local music
@@ -40,7 +40,7 @@ function love.load()
     background = love.graphics.newImage('sprites/black.png')
     player_img = love.graphics.newImage('sprites/player.png')
     
-    music = Music.new('music/music.mp3')
+    music = Music.new('music/music.mp3') -- set the music, must be mp3 
     music:play()
     soundEffects = SoundEffects.new()
     
@@ -226,7 +226,7 @@ end
 
 function loadHighScore()
     if love.filesystem.getInfo("highscore.txt") then
-        local file = love.filesystem.newFile("highscore.txt", "r")
+        local file = love.filesystem.newFile("highscore.txt", "r") -- r = read file not write when it comes to loading the highscore! 
         if file then
             local content = file:read()
             file:close()
